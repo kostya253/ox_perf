@@ -137,7 +137,7 @@ unsigned int get_time()
 int set_mem_limit(long int maxbytes)
 {
      struct rlimit rl;
-     long int softlimit = (long int)maxbytes * 0.95;
+     long int softlimit = (long int)maxbytes * 1.00;
      rl.rlim_cur = softlimit;
      rl.rlim_max = maxbytes;
      return setrlimit(RLIMIT_AS, &rl);
